@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#16213e">
+  <title>Orthos Bible Study</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" type="image/png" href="/icon.png">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div id="app">
+    <aside id="sidebar">
+      <div class="sidebar-header">
+        <img src="/logo.png" alt="Orthos" class="logo-img">
+        <div class="sidebar-controls">
+          <button id="add-bible-btn" title="Upload Bible JSON">+ Add Bible</button>
+          <button id="remove-bible-btn" title="Remove current translation">🗑 Remove</button>
+        </div>
+        <select id="translation-select"></select>
+        <div id="compare-select" class="hidden">
+          <div id="compare-checkboxes"></div>
+        </div>
+        <div id="online-translations" class="hidden">
+          <div id="online-bibles-list"></div>
+        </div>
+      </div>
+      <div class="sidebar-search">
+        <input type="text" id="bible-search" placeholder="Search scriptures...">
+        <button id="search-execute">🔍</button>
+      </div>
+      <ul id="book-list"></ul>
+    </aside>
+
+    <main id="main">
+      <div id="top-bar">
+        <button id="toggle-sidebar" aria-label="Toggle sidebar">☰</button>
+        <div id="breadcrumb"></div>
+        <div id="top-controls">
+          <label class="toggle-label">
+            <input type="checkbox" id="compare-toggle">
+            <span class="toggle-switch"></span>
+            <span>Compare</span>
+          </label>
+          <label class="toggle-label" title="Show/Hide Strong's Numbers">
+            <input type="checkbox" id="strongs-toggle">
+            <span class="toggle-switch"></span>
+            <span>Strong's</span>
+          </label>
+          <button id="toggle-concordance" title="Toggle Concordance Panel">Concordance</button>
+          <button id="toggle-notes" title="Toggle Notes Panel">Notes</button>
+          <button id="toggle-lexicon" title="Toggle Lexicon Panel">Lexicon</button>
+          <button id="toggle-tags" title="Toggle Tags Panel">Tags</button>
+          <button id="toggle-scripts" title="Toggle Scripts Panel">Scripts</button>
+          <button id="copy-verses" title="Copy chapter with verse numbers">Copy</button>
+          <button id="theme-toggle" title="Toggle dark/light theme">🌓</button>
+        </div>
+      </div>
+
+      <div id="content-area">
+        <div id="bible-viewer">
+          <div id="compare-area"></div>
+          <div id="chapter-view"></div>
+        </div>
+        <aside id="notes-panel" class="hidden">
+          <div class="concordance-header">
+            <h3>Notes</h3>
+            <button id="close-notes">×</button>
+          </div>
+          <div id="notes-list"></div>
+          <div id="note-editor">
+            <textarea id="note-text" placeholder="Write a note..."></textarea>
+            <button id="save-note">Save Note</button>
+            <button id="clear-note">Clear</button>
+          </div>
+        </aside>
+        <aside id="concordance-panel" class="hidden">
+          <div class="concordance-header">
+            <h3>Concordance</h3>
+            <button id="close-concordance">×</button>
+          </div>
+          <div class="concordance-search">
+            <input type="text" id="concordance-input" placeholder="Search Strong's (e.g. H7225)...">
+            <button id="concordance-search-btn">Search</button>
+          </div>
+          <div class="concordance-stats" id="concordance-stats"></div>
+          <ul id="concordance-list"></ul>
+        </aside>
+        <aside id="lexicon-panel" class="hidden">
+          <div class="concordance-header">
+            <h3>Lexicon</h3>
+            <button id="close-lexicon">×</button>
+          </div>
+          <div id="lexicon-body"></div>
+        </aside>
+        <aside id="tags-panel" class="hidden">
+          <div class="concordance-header">
+            <h3>Tags</h3>
+            <button id="close-tags">×</button>
+          </div>
+          <div id="tags-container">
+            <div id="tags-add" class="hidden">
+              <input type="text" id="tag-input" placeholder="Add keyword..." />
+              <button id="add-tag-btn">Add</button>
+            </div>
+            <div id="tags-list" class="tag-cloud"></div>
+          </div>
+        </aside>
+        <aside id="tag-entries-panel" class="hidden">
+          <div class="concordance-header">
+            <h3 id="tag-entries-title">Tag Entries</h3>
+            <button id="close-tag-entries">×</button>
+          </div>
+          <div id="tag-entries-list"></div>
+        </aside>
+        <aside id="scripts-panel" class="hidden">
+          <div class="concordance-header">
+            <h3>Scripts</h3>
+            <button id="close-scripts">×</button>
+          </div>
+          <div id="scripts-toolbar" style="padding:12px 16px;border-bottom:1px solid var(--border);display:flex;gap:8px;">
+            <button id="new-script-btn" style="flex:1;padding:8px;background:var(--accent);color:#fff;border:none;border-radius:6px;cursor:pointer;">+ New Script</button>
+          </div>
+          <ul id="scripts-list"></ul>
+        </aside>
+        <aside id="script-editor-panel" class="hidden">
+          <div class="concordance-header">
+            <h3 id="script-editor-title">Script</h3>
+            <button id="close-script-editor">×</button>
+          </div>
+          <div id="script-editor-toolbar" style="padding:8px 16px;border-bottom:1px solid var(--border);display:flex;gap:8px;align-items:center;">
+            <button id="preview-script-btn" title="Preview Markdown">👁</button>
+            <button id="copy-script-btn" title="Copy Markdown">📋</button>
+            <button id="delete-script-btn" title="Delete Script" style="color:#ef5350;">🗑</button>
+            <a id="markdown-help-btn" href="https://www.markdownguide.org/basic-syntax/" target="_blank" rel="noopener noreferrer" title="Markdown Help" style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:4px;color:var(--text);text-decoration:none;font-size:1rem;">?</a>
+          </div>
+          <div id="script-editor-content" style="flex:1;position:relative;overflow:hidden;">
+            <textarea id="script-textarea" placeholder="Write markdown here..." style="position:absolute;inset:0;"></textarea>
+            <div id="script-preview" class="hidden" style="position:absolute;inset:0;overflow-y:auto;padding:12px 16px;background:var(--bg);"></div>
+          </div>
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <input type="file" id="file-input" accept="application/json" hidden>
+  <div id="loading-overlay" class="hidden"><div class="spinner"></div><p>Loading Bible...</p></div>
+
+  <div id="confirm-modal" class="hidden" style="position:fixed;inset:0;background:rgba(0,0,0,0.6);align-items:center;justify-content:center;z-index:200;">
+    <div style="background:var(--bg-secondary);border:1px solid var(--border);border-radius:8px;padding:24px;max-width:400px;width:90%;box-shadow:0 4px 20px rgba(0,0,0,0.4);">
+      <h3 id="confirm-modal-title" style="margin:0 0 12px;color:var(--accent);">Confirm Delete</h3>
+      <p id="confirm-modal-message" style="margin:0 0 20px;color:var(--text);line-height:1.5;">Are you sure?</p>
+      <div style="display:flex;gap:8px;justify-content:flex-end;">
+        <button id="confirm-modal-cancel" style="padding:8px 16px;background:var(--bg-tertiary);border:1px solid var(--border);color:var(--text);border-radius:6px;cursor:pointer;">Cancel</button>
+        <button id="confirm-modal-ok" style="padding:8px 16px;background:#ef5350;border:none;color:#fff;border-radius:6px;cursor:pointer;">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

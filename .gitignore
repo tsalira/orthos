@@ -1,0 +1,19 @@
+# Temporary test and fix scripts
+test-render.js
+test-render-simple.js
+test-render-vm.js
+test-render-direct.js
+fix-line.js
+fix-regex.js
+replace-render.js
+
+# Node modules (if any)
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store

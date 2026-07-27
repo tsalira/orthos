@@ -1,0 +1,147 @@
+{
+  "metadata": {
+    "name": "King James Version",
+    "shortname": "KJV",
+    "module": "kjv",
+    "year": "1769",
+    "publisher": "Cambridge",
+    "owner": null,
+    "description": "King James Version Bible",
+    "lang": "en",
+    "lang_short": "en",
+    "copyright": 0,
+    "copyright_statement": "",
+    "url": null,
+    "citation_limit": 0,
+    "restrict": 0,
+    "italics": 1,
+    "strongs": 1,
+    "red_letter": 0,
+    "paragraph": 0,
+    "official": 1,
+    "research": 0,
+    "module_version": "1.0",
+    "audio_structure": null
+  },
+  "verses": [
+    {
+      "book_name": "Genesis",
+      "book": 1,
+      "chapter": 1,
+      "verse": 1,
+      "text": "In the beginning{H7225} God{H430} created{H1254} the heaven{H8064} and the earth{H776}."
+    },
+    {
+      "book_name": "Genesis",
+      "book": 1,
+      "chapter": 1,
+      "verse": 2,
+      "text": "And the earth{H776} was{H1961} without form{H8414}, and void{H922}; and darkness{H2822} was upon the face{H6440} of the deep{H8415}. And the Spirit{H7307} of God{H430} moved{H7363} upon the face{H6440} of the waters{H4325}."
+    },
+    {
+      "book_name": "Genesis",
+      "book": 1,
+      "chapter": 1,
+      "verse": 3,
+      "text": "And God{H430} said{H559}, Let there be light{H216}: and there was light{H216}."
+    },
+    {
+      "book_name": "Genesis",
+      "book": 1,
+      "chapter": 1,
+      "verse": 4,
+      "text": "And God{H430} saw{H7200} the light{H216}, that it was good{H2896}: and God{H430} divided{H914} the light{H216} from the darkness{H2822}."
+    },
+    {
+      "book_name": "Genesis",
+      "book": 1,
+      "chapter": 1,
+      "verse": 5,
+      "text": "And God{H430} called{H7121} the light{H216} Day{H3117}, and the darkness{H2822} he called{H7121} Night{H3915}. And the evening{H6153} and the morning{H1242} were the first{H259} day{H3117}."
+    },
+    {
+      "book_name": "John",
+      "book": 43,
+      "chapter": 1,
+      "verse": 1,
+      "text": "In the beginning{H7225} was{G2258} the Word{G3056}, and the Word{G3056} was{G2258} with{G4314} God{G2316}, and the Word{G3056} was{G2258} God{G2316}."
+    },
+    {
+      "book_name": "John",
+      "book": 43,
+      "chapter": 1,
+      "verse": 2,
+      "text": "The same{G3778} was{G2258} in the beginning{G746} with{G4314} God{G2316}."
+    },
+    {
+      "book_name": "John",
+      "book": 43,
+      "chapter": 1,
+      "verse": 3,
+      "text": "All things{G3956} were made{G1096} by{G1223} him{G846}; and without{G5565} him{G846} was not made{G1096} any{G3762} thing{G3588} that{G3588} was made{G1096}."
+    },
+    {
+      "book_name": "John",
+      "book": 43,
+      "chapter": 1,
+      "verse": 14,
+      "text": "And the Word{G3056} was flesh{G4561}, and dwelt{G4637} among{G1722} us, (and we{G2249} beheld{G2300} his{G846} glory{G1391}, the glory{G1391} as{G5613} of the only begotten{G3439} of the Father{G3962},) full{G4134} of grace{G5485} and truth{G225}."
+    },
+    {
+      "book_name": "Psalms",
+      "book": 19,
+      "chapter": 23,
+      "verse": 1,
+      "text": "The LORD{H3068} is my shepherd{G7462}; I shall not want{G2637}."
+    },
+    {
+      "book_name": "Psalms",
+      "book": 19,
+      "chapter": 23,
+      "verse": 2,
+      "text": "He maketh me to lie down{G5321} in green{H7488} pastures:{H4829} he leadeth me{H5146} beside{H5921} the still{H2416} waters{H4325}."
+    },
+    {
+      "book_name": "Matthew",
+      "book": 40,
+      "chapter": 1,
+      "verse": 1,
+      "text": "The book{G976} of the generation{G1078} of Jesus{G2424} Christ{G5547}, the son{G5207} of David{G1138}, the son{G5207} of Abraham{G11}."
+    },
+    {
+      "book_name": "Matthew",
+      "book": 40,
+      "chapter": 5,
+      "verse": 3,
+      "text": "Blessed{G3107} are the poor{G4434} in spirit{G4151}: for{G3754} theirs{G846} is the kingdom{G932} of heaven{G3772}."
+    },
+    {
+      "book_name": "Romans",
+      "book": 45,
+      "chapter": 3,
+      "verse": 23,
+      "text": "For{G1063} all{G3956} have sinned{G264}, and come short{G3003} of the glory{G1391} of God{G2316}:"
+    },
+    {
+      "book_name": "Romans",
+      "book": 45,
+      "chapter": 6,
+      "verse": 23,
+      "text": "For{G1063} the wages{G3808} of sin{G266} is death{G2288}; but{G1161} the gift{G1435} of God{G2316} is eternal{G166} life{G2222} through{G1223} Jesus{G2424} Christ{G5547} our{G2257} Lord{G2962}."
+    },
+    {
+      "book_name": "Revelation",
+      "book": 66,
+      "chapter": 1,
+      "verse": 1,
+      "text": "The Revelation{G602} of Jesus{G2424} Christ{G5547}, which{G3739} God{G2316} gave{G1325} unto{G846} him{G846}, to shew{G1166} unto his{G846} servants{G1401} things{G3588} which{G3739} must{G1163} shortly{G5035} come to pass{G1096}; and he sent{G3992} and signified{G4731} it by{G1223} his{G846} angel{G32} unto his{G846} servant{G1401} John{G2491}:"
+    },
+    {
+      "book_name": "Revelation",
+      "book": 66,
+      "chapter": 22,
+      "verse": 21,
+      "text": "The grace{G5485} of our{G2257} Lord{G2962} Jesus{G2424} Christ{G5547} be{G1510} with{G3326} you{G5213} all{G3956}. Amen{G281}."
+    }
+  ]
+}
